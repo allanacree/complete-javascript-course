@@ -30,7 +30,7 @@ if (markBMI > johnBMI) {
     markHigherBMI = true;
 }
 console.log(markHigherBMI);
-*/
+
 
 const massMark = 78;
 const heightMark = 1.69;
@@ -39,12 +39,50 @@ const heightJohn = 1.95;
 
 const BMIMark = massMark / heightMark ** 2;
 const BMIJohn = massJohn / (heightJohn * heightJohn);
-
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
 
-if(BMIMark >= BMIJohn) {
-    console.log(`Mark's BMI ${BMIMark}, is higher than John's ${BMIJohn}`);
+if(BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}), is higher than John's ${BMIJohn}`);
 } else {
-    console.log(`John's BMI ${BMIJohn}, is higher than Mark's ${BMIMark}`);
+    console.log(`John's BMI (${BMIJohn}), is higher than Mark's ${BMIMark}`);
 }
+
+
+//CHALLENGE #3
+const dolphinsScore = [96, 108, 89];
+const koalasScore = [88, 91, 110];
+let dolphinsTotal = 0;
+let koalasTotal = 0;
+
+for (let index = 0; index < dolphinsScore.length; index++) {
+    dolphinsTotal += dolphinsScore[index];
+}
+const dolphinsAverage = dolphinsTotal / dolphinsScore.length;
+console.log('Dolphins Average: ' + dolphinsAverage);
+
+for (let index = 0; index < koalasScore.length; index++) {
+    koalasTotal += koalasScore[index];
+}
+const koalasAverage = koalasTotal / koalasScore.length;
+console.log('Koalas Average: ' + koalasAverage);
+
+if(dolphinsAverage === koalasAverage) {
+    console.log('It is a draw!');
+} else if(dolphinsAverage > koalasAverage) {
+    console.log('The Dolphins win!');
+} else if(koalasAverage > dolphinsAverage) {
+    console.log('The Koalas win!');
+}
+
+
+//Challenge #4
+const bill = [275, 40, 430];
+for (let index = 0; index < bill.length; index++) {
+    console.log(`Bill: ${bill[index]}`);
+    const tip = bill[index] >= 50 && bill[index] <= 300 ? .15 * bill[index] : .20 * bill[index];
+    console.log(`Tip: ${tip}`);
+    console.log(`Total Amount: ${bill[index] + tip}`);
+    console.log('');
+}
+*/
