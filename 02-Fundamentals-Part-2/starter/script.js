@@ -29,6 +29,11 @@ console.log(fruitProcessor(5, 0));
 
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
+let x, y;
+x = y = 25-10-5;
+console.log(x, y);
+console.log(x, y); 
+
 
 
 //Function Declarations
@@ -277,3 +282,42 @@ while(dice !== 6) {
     if(dice === 6) console.log('Loop about to end.');
 }
 
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+
+
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+    return juice;
+}
+fruitProcessor(2, 3);
+
+
+
+const calcAge = function(birthYear) {
+    return 2037 - birthYear;
+}
+
+const yearsUntilRetirement = function(birthYear, firstName) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
+
+    if(retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years`);
+        return retirement;
+    } else {
+        console.log(`${firstName} has already retired!`);
+        return -1;
+    }
+
+
+}
+console.log(yearsUntilRetirement(1991, 'Allan'));
+console.log(yearsUntilRetirement(1970, 'Mike'));
+*/
